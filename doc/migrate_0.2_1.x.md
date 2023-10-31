@@ -22,7 +22,7 @@ On this new version
 ```typescript
 // file: my.module.ts
 import { Module } from '@nestjs/common';
-import { PromModule, MetricType } from '@digikare/nest-prom';
+import { PromModule, MetricType } from '@frzzzy/nest-prom';
 
 @Module({
   imports: [
@@ -71,7 +71,7 @@ import {
   GaugeMetric,
   HistogramMetric,
   SummaryMetric,
-} from '@digikare/nest-prom';
+} from '@frzzzy/nest-prom';
 
 @Injectable()
 export class MyService {
@@ -98,7 +98,7 @@ export class MyService {
 
 // file: my.module.ts
 import { Module } from '@nestjs/common';
-import { PromModule, MetricType } from '@digikare/nest-prom';
+import { PromModule, MetricType } from '@frzzzy/nest-prom';
 
 @Module({
   imports: []
@@ -116,7 +116,7 @@ import {
   HistogramMetric,
   PromSummary,
   SummaryMetric,
-} from '@digikare/nest-prom';
+} from '@frzzzy/nest-prom';
 
 @Injectable()
 export class MyService {

@@ -2,16 +2,10 @@
 
 A prometheus module for Nest.
 
-__BREAKING CHANGE__
-
-> nestjs-prom v0.2.x has been moved to [stable/0.2](https://github.com/digikare/nestjs-prom/tree/stable/0.2) branch.
->
-> To migrate from v0.2 to v1.x please see [Migrate from 0.2.x to 1.x](./doc/migrate_0.2_1.x.md)
-
 ## Installation
 
 ```bash
-$ npm install --save @digikare/nestjs-prom prom-client
+$ npm install --save @frzzzy/nestjs-prom prom-client
 ```
 
 ## How to use
@@ -20,7 +14,7 @@ Import `PromModule` into the root `ApplicationModule`
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { PromModule } from '@digikare/nestjs-prom';
+import { PromModule } from '@frzzzy/nestjs-prom';
 
 @Module({
   imports: [
@@ -58,7 +52,7 @@ By default, this feature is disabled.
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { PromModule } from '@digikare/nestjs-prom';
+import { PromModule } from '@frzzzy/nestjs-prom';
 
 @Module({
   imports: [
@@ -117,7 +111,7 @@ You have the following decorators:
 Below how to use it
 
 ```typescript
-import { CounterMetric, PromCounter } from '@digikare/nest-prom';
+import { CounterMetric, PromCounter } from '@frzzzy/nest-prom';
 
 @Controller()
 export class AppController {
@@ -141,7 +135,7 @@ export class AppController {
 ```
 
 ```typescript
-import { GaugeMetric, PromGauge } from '@digikare/nest-prom';
+import { GaugeMetric, PromGauge } from '@frzzzy/nest-prom';
 
 @Controller()
 export class AppController {
