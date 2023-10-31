@@ -38,14 +38,13 @@ export class InboundMiddleware implements NestMiddleware {
   }
 
   use (req, res, next) {
-    
-    this._in_progress.inc(this.getGauseLabels(req))
+    this._in_progress.inc({method: req.method, path: req.path})
     responseTime((req, res, time) => {
       const labels = this.getLabels(req,res)
-      this._in_progress.dec(this.getGauseLabels(req))
       this._histogram.observe(labels, time / 1000);
       this._counter.inc(labels);
     })(req, res, next);
+    this._in_progress.dec({method: req.method, path: req.path})
   }
   getLabels(req, res){
     const { url, method } = req;
@@ -54,10 +53,5 @@ export class InboundMiddleware implements NestMiddleware {
     if(res)
       status = normalizeStatusCode(res.statusCode);
     return { method, status, path }
-  }
-  getGauseLabels(req){
-    const { url, method } = req;
-    const path = normalizePath(url, this._options.withHttpMiddleware?.pathNormalizationExtraMasks, "#val");
-    return { method, path }
   }
 }
