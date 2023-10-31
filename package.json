@@ -1,6 +1,6 @@
 {
   "name": "@frzzzy/nestjs-prom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A promotheus module for nestjs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
