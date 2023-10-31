@@ -1,5 +1,5 @@
 {
-  "name": "@digikare/nestjs-prom",
+  "name": "@frzzzy/nestjs-prom",
   "version": "1.0.0",
   "description": "A promotheus module for nestjs",
   "main": "dist/index.js",
@@ -19,45 +19,47 @@
   "author": "Tieu-Philippe KHIM <pkhim@digikare.com>",
   "license": "MIT",
   "devDependencies": {
-    "@nestjs/common": "^7.0.0",
-    "@nestjs/core": "^7.0.0",
-    "@nestjs/platform-express": "^7.3.2",
-    "@types/jest": "^26.0.7",
-    "@types/node": "^12.12.53",
-    "@types/response-time": "^2.3.4",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/response-time": "^2.3.5",
     "@types/supertest": "^2.0.10",
     "jest": "^26.1.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.0",
+    "rxjs": "^7.8.1",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.3.0",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.0.0 || ^7.0.0",
-    "@nestjs/core": "^6.0.0 || ^7.0.0",
-    "reflect-metadata": "^0.1.12",
-    "rxjs": "^6.0.0"
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1"
   },
   "dependencies": {
-    "@nestjs/testing": "^7.3.2",
-    "prom-client": "^12.0.0",
+    "@nestjs/testing": "^10.0.0",
+    "prom-client": "^15.0.0",
     "response-time": "^2.3.2",
-    "url-value-parser": "^2.0.1"
+    "url-value-parser": "^2.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digikare/nestjs-prom.git"
+    "url": "git+https://github.com/fDizzzy/nestjs-prom.git"
   },
   "keywords": [
     "nestjs",
-    "promotheus"
+    "promotheus",
+    "typescript",
+    "metrics"
   ],
   "bugs": {
-    "url": "https://github.com/digikare/nestjs-prom/issues"
+    "url": "https://github.com/fDizzzy/nestjs-prom/issues"
   },
-  "homepage": "https://github.com/digikare/nestjs-prom#readme",
+  "homepage": "https://github.com/fDizzzy/nestjs-prom#readme",
   "contributors": [
     "Michael Yankelev @FSM1",
     "Ashleigh Simonelli @bashleigh",
