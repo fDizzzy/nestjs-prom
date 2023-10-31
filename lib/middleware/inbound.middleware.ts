@@ -38,13 +38,13 @@ export class InboundMiddleware implements NestMiddleware {
   }
 
   use (req, res, next) {
-    this._in_progress.inc({method: req.method, path: req.path})
+    this._in_progress.inc({method: req.method, path: req._parsedUrl.path})
     responseTime((req, res, time) => {
       const labels = this.getLabels(req,res)
       this._histogram.observe(labels, time / 1000);
       this._counter.inc(labels);
     })(req, res, next);
-    this._in_progress.dec({method: req.method, path: req.path})
+    this._in_progress.dec({method: req.method, path: req._parsedUrl.path})
   }
   getLabels(req, res){
     const { url, method } = req;
