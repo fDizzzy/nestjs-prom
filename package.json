@@ -22,8 +22,8 @@
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
-    "@types/jest": "^29.5.2",
-    "@types/node": "^20.3.1",
+    "@types/jest": "^29.5.7",
+    "@types/node": "^20.8.9",
     "@types/response-time": "^2.3.5",
     "@types/supertest": "^2.0.10",
     "jest": "^26.1.0",
@@ -32,7 +32,7 @@
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.3.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.10"
   },
   "peerDependencies": {
     "@nestjs/common": "^10.0.0",
