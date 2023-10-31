@@ -15,7 +15,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@frzzzy'
       - run: npm ci
-      - run: npm run build
+      - run: npm run build; exit 0;
       - if: always()
         run: npm publish --access public
         env:

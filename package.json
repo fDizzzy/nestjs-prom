@@ -67,6 +67,6 @@
     "@litichevskiydv"
   ],
   "publishConfig": {
-    "tag": "next"
+    "tag": "latest"
   }
 }
