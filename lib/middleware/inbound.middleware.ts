@@ -49,27 +49,15 @@ export class InboundMiddleware implements NestMiddleware {
   }
   getLabels(req, res){
     const { url, method } = req;
-      const path = normalizePath(url, this._options.withHttpMiddleware?.pathNormalizationExtraMasks, "#val");
-      if (path === "/favicon.ico") {
-        return ;
-      }
-      if (path === this._options.customUrl || path === this._options.metricPath) {
-        return ;
-      }
-      var status = ""
-      if(res)
-         status = normalizeStatusCode(res.statusCode);
-      return { method, status, path }
+    const path = normalizePath(url, this._options.withHttpMiddleware?.pathNormalizationExtraMasks, "#val");
+    var status = ""
+    if(res)
+      status = normalizeStatusCode(res.statusCode);
+    return { method, status, path }
   }
   getGauseLabels(req){
     const { url, method } = req;
-      const path = normalizePath(url, this._options.withHttpMiddleware?.pathNormalizationExtraMasks, "#val");
-      if (path === "/favicon.ico") {
-        return ;
-      }
-      if (path === this._options.customUrl || path === this._options.metricPath) {
-        return ;
-      }
-      return { method, path }
+    const path = normalizePath(url, this._options.withHttpMiddleware?.pathNormalizationExtraMasks, "#val");
+    return { method, path }
   }
 }
